@@ -1,0 +1,267 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* filter: blur(2px); */
+    z-index: 0;
+}
+
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #fff;
+    background-image: url("images/count.jpg");
+    background-size: 2000px 1100px;
+    background-position: fixed;
+}
+
+
+/* Header */
+
+.page-title {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    /* min-width: 955px; */
+}
+
+.page-title h2 {
+    font-size: 50px;
+    padding: 30px 15px 0px;
+}
+
+/* Buttons */
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    margin: 50px auto 100px;
+}
+
+.play,
+.rules,
+.clear {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 40px;
+    margin: 0px 10px;
+}
+
+.play {
+    background-color: green;
+    transition: background-color 1s;
+}
+
+.rules {
+    background-color: rgb(104, 102, 102);
+    transition: background-color 1s;
+}
+
+.clear {
+    background-color: rgb(117, 36, 36);
+    transition: background-color 1s;
+}
+
+.play:hover {
+    background-color: rgb(2, 175, 2);
+    cursor: pointer;
+}
+
+.rules:hover {
+    background-color: rgb(145, 143, 143);
+    cursor: pointer;
+}
+
+.clear:hover {
+    background-color: rgb(172, 55, 55);
+    cursor: pointer;
+}
+
+/* Modal */
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(104, 102, 102);
+    width: 60vw;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 20px;
+    visibility: hidden;
+    z-index: 2;
+}
+
+.blur-background {
+    backdrop-filter: blur(6px);
+}
+
+.modal-close {
+    color: #fff;
+    background-color: rgb(104, 102, 102);
+    display: block;
+    float: right;
+    padding: 10px;
+    margin: 15px 25px 0px 0px;
+    font-size: 20px;
+    font-weight: 700;
+    border: none;
+}
+
+.modal-close:hover {
+    cursor: pointer;
+}
+
+.modal-text {
+    font-size: 18px;
+    padding: 0px 10px;
+}
+
+.modal h2 {
+    text-align: center;
+    padding: 15px 0px 0px 25px;
+}
+
+.modal p {
+    padding: 20px 0px;
+}
+
+/* Interface */
+
+.interface {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgba(51, 51, 51, 0.9);
+    border-radius: 20px;
+    width: 80vw;
+    max-width: 1000px;
+    height: 50vh;
+    margin: 0 auto;
+    visibility: hidden;
+}
+
+.choices {
+    display: flex;
+}
+
+.rock,
+.paper,
+.scissors {
+    margin: 0px 40px;
+    padding: 10px;
+    text-align: center;
+    transition: box-shadow 1s;
+    border-radius: 10px;
+}
+
+.rock:hover,
+.paper:hover,
+.scissors:hover {
+  cursor: pointer;
+  box-shadow: 0 0 0 3px green;
+  
+}
+
+.rock img,
+.paper img,
+.scissors img {
+    height: 100px;
+    width: 100px;
+}
+
+.scores,
+.game-scores {
+    display: flex;
+}
+
+.player,
+.computer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 20px;
+}
+
+.player-score,
+.computer-score {
+    padding: 10px 10px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.player-score {
+    color: green;
+}
+
+.computer-score {
+    color: rgb(211, 40, 40);
+}
+
+.win-streak {
+    margin: 0px 30px;
+}
+
+
+/* Media Queries */
+
+@media (max-width: 645px) {
+
+    .page-title h2 {
+        font-size: 30px;
+        padding: 30px 10px 0px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        margin: 30px auto 50px;
+    }
+
+    .interface-text {
+        font-size: 14px;
+    }
+
+    .play,
+    .rules,
+    .clear {
+        margin: 10px auto;
+    }
+
+    .modal-close {
+        padding: 5px;
+    }
+
+    .modal-text h2 {
+        font-size: 18px;
+    }
+
+    .modal-text p{
+        font-size: 14px;
+    }
+
+    .rock,
+    .paper,
+    .scissors {
+        margin: 0px 15px;
+        font-size: 14px;
+    } 
+
+    .rock img,
+    .paper img,
+    .scissors img {
+        height: 60px;
+        width: 60px;
+    }
+
+    .win-streak {
+        font-size: 16px;
+    }
+
+
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,500;0,600;0,700;1,500;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <!-- Header -->
+
+    <section class="header">
+
+        <div class="page-title">
+            <h2>ROCK</h2>
+            <h2>PAPER</h2>
+            <h2>SCISSORS</h2>
+        </div>
+
+    </section>
+
+    <!-- Buttons -->
+
+    <section class="buttons">
+
+        <button class="play" id="play">Play</button>
+        <button class="rules" id="rules">Rules</button>
+        <button class="clear" id="clear">Clear Win Streak</button>
+
+    </section>
+
+    <!-- Modal -->
+
+    <div class="modal" id="modal">
+        <button class="modal-close" id="modal-close">X</button>
+        <div class="modal-text">
+            <h2>Rules of Rock Paper Scissors</h2>
+            <p>The rules of the game are simple. You will choose from the following three options; rock, paper or scissors. The computer will then select an option at random.</p>
+            <p>Rock beats scissors, scissors beats paper, and paper beats rock. Whoever reaches a score of 5 first wins the game. Good luck!</p>
+        </div>
+    </div>
+
+    <!-- Interface -->
+
+    <section class="interface" id="interface">
+
+        <h2 id="interface-text">Make your move</h2>
+
+        <div class="choices">
+
+            <div class="rock" id="rock">
+                <img src="images/rock.png" alt="">
+                <h3>Rock</h3>
+            </div>
+
+            <div class="paper" id="paper">
+                <img src="images/paper.png" alt="">
+                <h3>Paper</h3>
+            </div>
+
+            <div class="scissors" id="scissors">
+                <img src="images/scissors.png" alt="">
+                <h3>Scissors</h3>
+            </div>
+
+        </div>
+
+        <div class="game-scores">
+
+            <div class="player">
+                <h3>Player</h3>
+                <span class="player-score" id="player-score">0</span>
+            </div>
+
+            <div class="computer">
+                <h3>Computer</h3>
+                <span class="computer-score" id="computer-score">0</span>
+            </div>
+        </div>
+
+        <div class="scores">
+            <h3 class="win-streak">Win Streak: <span id="win-streak">5</span></h3>
+        </div>
+        
+
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
