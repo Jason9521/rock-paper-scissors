@@ -28,7 +28,7 @@
 
         <button class="play" id="play">Play</button>
         <button class="rules" id="rules">Rules</button>
-        <button class="clear" id="clear">Clear Win Streak</button>
+        <button class="reset" id="reset">Reset</button>
 
     </section>
 
@@ -47,23 +47,28 @@
 
     <section class="interface" id="interface">
 
-        <h2 id="interface-text">Make your move</h2>
+        <h2 class="interface-text" id="interface-text">Make your move</h2>
+
+        <div class="interface-buttons" id="interface-buttons">
+            <button class="play-again" id="play-again">Play Again</button>
+            <button class="quit" id="quit">Quit</button>
+        </div>
 
         <div class="choices">
 
             <div class="rock" id="rock">
                 <img src="images/rock.png" alt="">
-                <h3>Rock</h3>
+                <h3 id="rock-text">Rock</h3>
             </div>
 
             <div class="paper" id="paper">
                 <img src="images/paper.png" alt="">
-                <h3>Paper</h3>
+                <h3 id="paper-text">Paper</h3>
             </div>
 
             <div class="scissors" id="scissors">
                 <img src="images/scissors.png" alt="">
-                <h3>Scissors</h3>
+                <h3 id="scissors-text">Scissors</h3>
             </div>
 
         </div>
@@ -82,7 +87,7 @@
         </div>
 
         <div class="scores">
-            <h3 class="win-streak">Win Streak: <span id="win-streak">5</span></h3>
+            <h3 class="win-streak">Win Streak: <span id="win-streak">0</span></h3>
         </div>
         
 
