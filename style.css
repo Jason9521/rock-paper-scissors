@@ -298,3 +298,43 @@ body {
     }
 
 }
+
+@media (max-width: 520px) {
+    .page-title h2 {
+        font-size: 20px;
+        padding: 30px 10px 0px;
+    }
+
+    .play,
+    .rules,
+    .reset {
+        font-size: 16px;
+    }
+
+    .rock,
+    .paper,
+    .scissors {
+        font-size: 12px;
+        margin: 0px 5px;
+    } 
+
+    .rock img,
+    .paper img,
+    .scissors img {
+        height: 45px;
+        width: 45px;
+    }
+
+    .interface-buttons button {
+        font-size: 12px;
+    }
+
+    .player h3,
+    .computer h3 {
+        font-size: 14px;
+    }
+
+    .win-streak {
+        font-size: 14px;
+    }
+}
