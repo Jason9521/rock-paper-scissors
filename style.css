@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* filter: blur(2px); */
     z-index: 0;
 }
 
@@ -10,11 +9,14 @@
 body {
     font-family: 'Open Sans', sans-serif;
     color: #fff;
-    background-image: url("images/count.jpg");
+    background-image: url("images/stars.jpg");
     background-size: 2000px 1100px;
     background-position: fixed;
 }
 
+.button-disable {
+    pointer-events: none;
+}
 
 /* Header */
 
@@ -22,7 +24,6 @@ body {
     display: flex;
     justify-content: center;
     width: 100%;
-    /* min-width: 955px; */
 }
 
 .page-title h2 {
@@ -41,7 +42,7 @@ body {
 
 .play,
 .rules,
-.clear {
+.reset {
     color: #fff;
     font-size: 20px;
     font-weight: 700;
@@ -49,6 +50,21 @@ body {
     border: none;
     border-radius: 40px;
     margin: 0px 10px;
+}
+
+.interface-buttons {
+    display: flex;
+    visibility: hidden;
+}
+
+.interface-buttons button {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 40px;
+    margin: 20px 20px;
 }
 
 .play {
@@ -61,10 +77,22 @@ body {
     transition: background-color 1s;
 }
 
-.clear {
+.reset {
     background-color: rgb(117, 36, 36);
     transition: background-color 1s;
 }
+
+.play-again {
+    background-color: green;
+    transition: background-color 1s;
+}
+
+.quit {
+    background-color: rgb(117, 36, 36);
+    transition: background-color 1s;
+}
+
+/* Hover */
 
 .play:hover {
     background-color: rgb(2, 175, 2);
@@ -76,7 +104,17 @@ body {
     cursor: pointer;
 }
 
-.clear:hover {
+.reset:hover {
+    background-color: rgb(172, 55, 55);
+    cursor: pointer;
+}
+
+.play-again:hover {
+    background-color: rgb(2, 175, 2);
+    cursor: pointer;
+}
+
+.quit:hover {
     background-color: rgb(172, 55, 55);
     cursor: pointer;
 }
@@ -85,20 +123,16 @@ body {
 
 .modal {
     position: fixed;
-    top: 50%;
+    top: 65%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: rgb(104, 102, 102);
-    width: 60vw;
+    width: 65vw;
     max-width: 600px;
     margin: 0 auto;
     border-radius: 20px;
     visibility: hidden;
     z-index: 2;
-}
-
-.blur-background {
-    backdrop-filter: blur(6px);
 }
 
 .modal-close {
@@ -142,7 +176,7 @@ body {
     border-radius: 20px;
     width: 80vw;
     max-width: 1000px;
-    height: 50vh;
+    height: 58vh;
     margin: 0 auto;
     visibility: hidden;
 }
@@ -154,7 +188,7 @@ body {
 .rock,
 .paper,
 .scissors {
-    margin: 0px 40px;
+    margin: 0px 30px;
     padding: 10px;
     text-align: center;
     transition: box-shadow 1s;
@@ -165,8 +199,8 @@ body {
 .paper:hover,
 .scissors:hover {
   cursor: pointer;
+  /* Tip: Other elements will stay in place on hover if box-shadow is used in place of border-radius */
   box-shadow: 0 0 0 3px green;
-  
 }
 
 .rock img,
@@ -186,7 +220,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0px 20px;
+    margin: 40px 20px 0px;
 }
 
 .player-score,
@@ -224,12 +258,12 @@ body {
     }
 
     .interface-text {
-        font-size: 14px;
+        font-size: 18px;
     }
 
     .play,
     .rules,
-    .clear {
+    .reset {
         margin: 10px auto;
     }
 
@@ -262,6 +296,5 @@ body {
     .win-streak {
         font-size: 16px;
     }
-
 
 }
